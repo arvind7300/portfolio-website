@@ -38,7 +38,7 @@ const Contact = () => {
     }
     
     if (name === "phone") {
-      if (!/^\d{10,10}$/.test(value.replace(/\D/g, ""))) {
+      if (!/^\d{10}$/.test(value.replace(/\D/g, ""))) {
         errorMsg = "Enter a valid 10-digit phone number";
       }
     }
@@ -60,8 +60,22 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Email Notification Logic (Using FormSubmit API)
-    const formURL = "https://formsubmit.co/your-email@gmail.com"; // Replace with your email
+    // Check if all fields are valid
+    let hasError = false;
+    Object.keys(formData).forEach((key) => {
+      if (!formData[key] || errors[key]) {
+        validateField(key, formData[key]);
+        hasError = true;
+      }
+    });
+
+    if (hasError) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Email Sending Logic (FormSubmit API)
+    const formURL = "https://formsubmit.co/123arvindkashyap@gmail.com"; // Replace with your email
     try {
       await fetch(formURL, {
         method: "POST",
@@ -84,19 +98,19 @@ const Contact = () => {
         <div className="contact-left">
           <h3>Connect with me:</h3>
           <div className="social-icons">
-            <a href="https://wa.me/919876543210" target="_blank" className="social-icon whatsapp">
+            <a href="https://wa.me/730516296" target="_blank" className="social-icon whatsapp">
               <FaWhatsapp />
             </a>
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" className="social-icon linkedin">
+            <a href="https://www.linkedin.com/in/arvind-kashyap-781b06212" target="_blank" className="social-icon linkedin">
               <FaLinkedin />
             </a>
-            <a href="https://github.com/yourgithub" target="_blank" className="social-icon github">
+            <a href="https://github.com/arvind7300" target="_blank" className="social-icon github">
               <FaGithub />
             </a>
-            <a href="https://www.instagram.com/yourinstagram" target="_blank" className="social-icon instagram">
+            <a href="https://www.instagram.com/arvind_13_" target="_blank" className="social-icon instagram">
               <FaInstagram />
             </a>
-            <a href="mailto:youremail@gmail.com" className="social-icon email">
+            <a href="mailto:123arvindkashyap@gmail.com" className="social-icon email">
               <FaEnvelope />
             </a>
           </div>
@@ -107,11 +121,18 @@ const Contact = () => {
           <h3>Send me a message:</h3>
           <form onSubmit={handleSubmit}>
             <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required />
-            <PhoneInput country={"in"} value={formData.phone} onChange={handlePhoneChange} />
+            {errors.name && <span className="error">{errors.name}</span>}
+
+            <PhoneInput country={"in"} value={formData.phone} onChange={handlePhoneChange} inputStyle={{ color: "black" }} />
             {errors.phone && <span className="error">{errors.phone}</span>}
+
             <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required />
+            {errors.email && <span className="error">{errors.email}</span>}
+
             <textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange} required />
-            <button type="submit" className="btn" disabled={isSubmitting || Object.values(errors).some(error => error)}>
+            {errors.message && <span className="error">{errors.message}</span>}
+
+            <button type="submit" className="btn" disabled={isSubmitting}>
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </form>
