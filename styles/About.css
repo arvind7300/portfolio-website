@@ -1,16 +1,41 @@
 .about-section {
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e) !important; /* ✅ Force Apply */
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     color: white;
-    padding: 50px 10%;
+    padding: 50px 0;  /* ✅ Extra space hatane ke liye */
     text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ Sara content including heading center ho jayega */
+    text-align: center;
+    width: 100%;
+}
 
 .about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 18px;
+    max-width: 900px;  /* ✅ Width ko limit karne ke liye */
+    width: 90%;
+    text-align: center;
     line-height: 1.6;
+}
+
+.about-content h2 {
+    text-align: center !important; /* ✅ Heading center ho jayegi */
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 2rem; /* ✅ Size improve karne ke liye */
+    font-weight: bold;
+}
+
+.about-content p {
+    text-align: center;
+    max-width: 100%;
 }
 
 .about-highlight {
