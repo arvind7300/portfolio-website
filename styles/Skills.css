@@ -1,11 +1,56 @@
-.skills {
-    padding: 50px;
+/* Skills Section */
+.skills-section {
     text-align: center;
-    background: white;
-    color: black;
+    padding: 50px 0;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Same as Hero & Projects */
+    color: white;
 }
 
-.dark-mode .skills {
-    background: #1a1a1a;
-    color: white;
+/* Skills Grid */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Individual Skill Card */
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect */
+.skill-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(173, 216, 230, 0.8); /* Light Blue Glow */
+}
+
+/* Skill Icons */
+.skill-icon {
+    font-size: 40px;
+    color: lightblue;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Skill Name */
+.skill-card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: lightblue;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
 }
