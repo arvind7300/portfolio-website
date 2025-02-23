@@ -1,0 +1,110 @@
+/* Floating Navbar */
+.navbar {
+    position: fixed;
+    top: 20px; /* Navbar ko upar thoda gap dekar latkane ka effect */
+    left: 50%;
+    transform: translateX(-50%); /* Center align */
+    background: rgba(255, 255, 255, 0.9); /* Light transparent background */
+    padding: 12px 40px;
+    border-radius: 50px; /* Google-style round navbar */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Smooth floating effect */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+.navbar {
+    height: 60px; /* Isko kam karke navbar ko patla bana diya */
+    padding: 10px 30px; /* Thoda less padding rakha */
+}
+
+
+/* Hover Effect */
+.navbar:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover on Links */
+.nav-links a:hover {
+    background: rgba(0, 162, 255, 0.2);
+    color: #0078ff;
+}
+
+/* Profile Photo & Name Hover Effect */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-profile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-profile:hover {
+    transform: scale(1.1); /* Pehle jaisa hover zoom effect */
+  }
+  
+
+
+.nav-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-left:hover {
+    transform: scale(1.5);
+}
+
+.nav-left:hover .profile-pic {
+    box-shadow: 0 0 15px lightblue;
+}
+
+.nav-left:hover .nav-name {
+    text-shadow: 0 0 10px lightblue;
+    color: lightblue;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    cursor: pointer;
+    padding: 8px 12px;
+    background: lightblue;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dark-mode-toggle:hover {
+    background: white;
+    box-shadow: 0 0 10px lightblue;
+}
+

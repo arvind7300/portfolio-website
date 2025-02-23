@@ -1,0 +1,11 @@
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+.dark-mode .footer {
+    background: #0d0d0d;
+    color: lightblue;
+}

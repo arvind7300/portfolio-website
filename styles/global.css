@@ -1,0 +1,149 @@
+/* Default Light Mode */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode for Full Website */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    color: #004e92;
+}
+
+/* Navbar Name Styling */
+.nav-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Dark Mode - Navbar Name Fix */
+.dark-mode .nav-name {
+    color: lightblue;
+    text-shadow: 0 0 10px lightblue;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* Toggle Switch Button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Toggle Slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Dark Mode Active */
+input:checked + .slider {
+    background-color: #004e92;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Mode Text */
+.mode-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    transition: color 0.3s;
+}
+
+/* 🌙 Dark Mode Styles for Full Website */
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .mode-text {
+    color: lightblue;
+}
+
+/* Navbar in Dark Mode */
+.dark-mode .navbar {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.dark-mode .nav-links a {
+    color: lightblue;
+}
+
+/* Hero Section in Dark Mode */
+.dark-mode .hero {
+    background: linear-gradient(135deg, #0c0c0c, #1a1a1a);
+}
+
+/* Buttons in Dark Mode */
+.dark-mode .btn {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode .btn-outline {
+    border-color: white;
+    color: white;
+}
+
+.dark-mode .btn-outline:hover {
+    background: white;
+    color: black;
+}

@@ -1,0 +1,80 @@
+/* Projects Section */
+.projects-section {
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Same as Hero Section */
+    color: #ffffff;
+}
+
+/* Projects Container (Flexbox for Slider Effect) */
+.projects-container {
+    display: flex;
+    overflow-x: auto; /* Horizontal Scroll */
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none; /* Hide scrollbar for smooth effect */
+}
+
+/* Each Project Card */
+.project-card {
+    background: #112240;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    overflow: hidden;
+    flex: 0 0 auto; /* Maintain size in flex scroll */
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect (Shine + Zoom) */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(173, 216, 230, 0.8); /* Light Blue Glow */
+}
+
+/* Project Image */
+.project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Project Content */
+.project-content {
+    padding: 15px;
+}
+
+.project-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #64ffda;
+}
+
+.project-content p {
+    font-size: 14px;
+    color: #8892b0;
+}
+
+/* GitHub & Live Demo Links */
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #64ffda;
+    font-weight: bold;
+    transition: color 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.project-links a:hover {
+    background: #64ffda;
+    color: #112240;
+}

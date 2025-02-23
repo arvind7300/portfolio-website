@@ -1,0 +1,150 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    padding: 0 10%;
+}
+
+/* Hero Container */
+.hero-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Hero Content (Left Side) */
+.hero-content {
+    text-align: left; /* Left align */
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.highlight {
+    color: lightblue;
+    text-shadow: 0 0 15px lightblue;
+}
+
+.animated-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: lightblue;
+    text-shadow: 0 0 15px lightblue;
+    animation: fadeIn 3s infinite alternate;
+}
+
+/* Hero Image (Right Side) */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    position: relative;
+}
+
+/* Circular Profile Photo with Shine Effect */
+.profile-photo {
+    width: 300px; /* Fixed Size */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular Shape */
+    border: 5px solid lightblue; /* Light Blue Border */
+    box-shadow: 0 0 20px rgba(173, 216, 230, 0.8);
+    animation: float 3s infinite ease-in-out, shine 2s infinite alternate;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Shine Animation */
+@keyframes shine {
+    0% { box-shadow: 0 0 10px rgba(173, 216, 230, 0.5); }
+    100% { box-shadow: 0 0 30px rgba(173, 216, 230, 1); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .animated-text {
+        font-size: 1.8rem;
+    }
+    
+    .profile-photo {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .profile-photo {
+        width: 200px; /* Mobile par small size */
+        height: 200px;
+    }
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Hero Buttons */
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background-color: lightblue;
+    color: black !important; /* Always Black */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black !important; /* Always Black */
+    box-shadow: 0 0 10px lightblue;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid lightblue;
+    color: black !important; /* Always Black */
+}
+
+.btn-outline:hover {
+    background-color: lightblue;
+    color: black !important; /* Always Black */
+}

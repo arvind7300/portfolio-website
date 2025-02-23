@@ -1,0 +1,11 @@
+.skills {
+    padding: 50px;
+    text-align: center;
+    background: white;
+    color: black;
+}
+
+.dark-mode .skills {
+    background: #1a1a1a;
+    color: white;
+}
