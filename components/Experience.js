@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Experience.css";
 
 // Import Experience Image (Make sure it's in the assets folder)
-import experienceImage from "../assets/experience.jpg";
+import experienceImage from "../assets/experience.png";
 
 const Experience = () => {
   return (
