@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Skills.css";
 import { FaPython, FaDatabase, FaCloud, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
-import { SiMysql, SiPostgresql, SiGooglecloud, SiApacheairflow } from "react-icons/si";
+import { SiMysql, SiPostgresql, SiGooglecloud, SiApacheairflow, SiOpenai } from "react-icons/si";
 
 const skills = [
   { name: "Python", icon: <FaPython /> },
@@ -13,6 +13,7 @@ const skills = [
   { name: "PostgreSQL", icon: <SiPostgresql /> },
   { name: "Git", icon: <FaGitAlt /> },
   { name: "GitHub", icon: <FaGithub /> },
+  { name: "ChatGPT", icon: <SiOpenai /> },  /* 🔥 ChatGPT Added */
 ];
 
 const Skills = () => {
