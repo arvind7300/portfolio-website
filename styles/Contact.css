@@ -1,11 +1,115 @@
-.contact {
-    padding: 50px;
+/* Contact Section */
+.contact-section {
     text-align: center;
-    background: white;
-    color: black;
+    padding: 50px 0;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Match Theme */
+    color: white;
 }
 
-.dark-mode .contact {
-    background: #1a1a1a;
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Left Side - Social Media */
+.contact-left {
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 28px;
     color: white;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+/* Hover Effect for Social Icons */
+.social-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px lightblue;
+}
+
+/* Individual Icon Colors */
+.whatsapp:hover { color: #25D366; background: rgba(37, 211, 102, 0.2); }
+.linkedin:hover { color: #0077b5; background: rgba(0, 119, 181, 0.2); }
+.github:hover { color: #ffffff; background: rgba(255, 255, 255, 0.2); }
+.instagram:hover { color: #E1306C; background: rgba(225, 48, 108, 0.2); }
+.email:hover { color: #ff4444; background: rgba(255, 68, 68, 0.2); }
+
+/* Right Side - Contact Form */
+.contact-right {
+    width: 350px;
+    text-align: center;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.contact-right textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Send Button */
+.btn {
+    background: lightblue;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    box-shadow: 0 0 10px lightblue;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
