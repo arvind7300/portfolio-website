@@ -1,11 +1,73 @@
-.experience {
-    padding: 50px;
+/* Experience Section */
+.experience-section {
     text-align: center;
-    background: white;
-    color: black;
+    padding: 50px 0;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Same as Projects */
+    color: white;
 }
 
-.dark-mode .experience {
-    background: #1a1a1a;
-    color: white;
+/* Centered Experience Container */
+.experience-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Experience Card */
+.experience-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect */
+.experience-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(173, 216, 230, 0.8); /* Light Blue Glow */
+}
+
+/* Experience Image */
+.experience-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Experience Content */
+.experience-content {
+    padding: 15px;
+}
+
+.experience-content h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: lightblue;
+}
+
+.duration {
+    font-size: 14px;
+    color: #64ffda;
+    font-weight: bold;
+}
+
+.experience-content p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+    }
+
+    .experience-card {
+        width: 90%;
+    }
 }
