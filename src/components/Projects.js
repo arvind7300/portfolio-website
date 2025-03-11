@@ -28,7 +28,7 @@ const projects = [
     image: project3,
     description: "A responsive portfolio to showcase my skills & projects.",
     github: "https://github.com/arvind7300/portfolio-website",
-    live: "https://yourliveurl.com/portfolio",
+    live: "https://portfolio-website-lv5b.vercel.app/",
   },
   {
     title: "Hostel Management System",

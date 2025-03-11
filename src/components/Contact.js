@@ -38,10 +38,12 @@ const Contact = () => {
     }
     
     if (name === "phone") {
-      if (!/^\d{10}$/.test(value.replace(/\D/g, ""))) {
-        errorMsg = "Enter a valid 10-digit phone number";
+      const digitCount = value.replace(/\D/g, "").length;
+      if (digitCount < 10 || digitCount > 15) {
+        errorMsg = "Enter a valid phone number";
       }
     }
+    
     
     if (name === "email") {
       const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
